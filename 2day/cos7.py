@@ -1,0 +1,19 @@
+'''
+8
+이름에 특정 문자가 포함된 개수 구하기
+대조영빌딩
+4F  Kickboard Association
+3F  Common Engineering
+2F  Adios
+1F  CafeMasita. Ltd
+회사 이름에 'A' 또는 'K'가 들어가는 회수 세기
+'''
+def solution(name_list):
+    answer = 0
+    for name in name_list:
+        for char in name:
+            if char.find('A') or char.find('K'):
+                answer += 1
+    return answer
+name = ["Kickboard Association","Common Engineering","Adios","CafeMasita. Ltd"]
+print(solution(name))
